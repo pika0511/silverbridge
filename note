@@ -1,0 +1,71 @@
+■17-08-16
+※게이트 웨이까지 추적
+→ tracert 게이트웨이 ip
+
+■17-08-19
+※날짜 형변환
+table LGCEDCWAS04_EDMS_YYYYMMDD
+| eval _time=substr(line, 1, 20)
+| eval _time = date(_time, "yyyy.MM.dd HH:mm:ss")
+| import create=t LGCEDCWAS04_EDMS_YYYYMMDD_data
+
+■ nmap 사용법 → http://hyess.tistory.com/252 / http://namjmnam.blog.me/20205975010 / http://amerika.tistory.com/88
+
+■쿼리tip
+
+	■ 일반적인 검색
+	table ecm
+	| parse ecm
+
+	■ 코어를 최대로 활용한 검색
+	table ecm
+	| parallel core=4 [parse ecm]
+
+	※ PC 코어확인
+	내컴퓨터(우클릭) → 장치관리자 → 프로세서
+
+	■ 첫글자만으로 log의 종류를 카운트
+	table tibero
+	| rex field=line "\d+/\d+/\d+\s\d+:\d+:\d+\.\d+\s\[(?<TYPE1>\S+)\]\[(?<TYPE2>\d+)\]\s+(?<TYPE3>\d+)\s*(?<FIRST>\S{1})"
+	| stats count by FIRST
+
+	■ 특수문자만 찾아내서 형태 보기
+	table tibero
+	| signature
+	| stats count by signature
+
+■ 세미나(서브넷 마스크)
+unicase 1:1
+multicase 1:group
+broadcase 1:All
+
+dhcp : 내 ip를 모를때 아이피를 알려줌
+	여기서 dns를 가져옴
+	dns의 사업자 lg, kt, skt(dns server) -> fullresulber
+
+fullresulber가 끊임없이 질의
+네트워크카드를 통과하는것이 맥주소
+ip, 맥, broadcast
+
+
+dns : 
+
+특수목적 아이피
+127.0.0.0 
+
+
+<서브넷 마스크>
+
+
+
+<2017-08-24>
+■ 자바 각 종 통계관련 API
+http://commons.apache.org/proper/commons-math/javadocs/api-3.3/org/apache/commons/math3/distribution/NormalDistribution.html
+
+■ 트러블 슈팅 장애(주요)요인들 50가지 정리해야 함..
+마감일 다음주 화요일 까지 / 수요일 네트워크 개발자 미팅때문에 그럴듯..
+
+■ 여기부턴 병렬처리가 아닌 순차처리
+| stl TYPE3
+| oml?
+| 
