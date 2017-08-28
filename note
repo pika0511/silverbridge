@@ -69,3 +69,95 @@ http://commons.apache.org/proper/commons-math/javadocs/api-3.3/org/apache/common
 | stl TYPE3
 | oml?
 | 
+
+----------170828 copy---------------------------------------------------
+■
+http://www.xmind.net/m/Abaj
+
+http://aileen93.tistory.com/85
+
+https://openweb.or.kr/?p=4476
+- 10.26선관위 웹사이트 서비스 장애의 원인
+
+http://www.sqler.com/?vid=bNotice&mid=bIISLec&document_srl=392262
+-윈도우 서버2008 관리 관련 동영상강좌
+
+http://www.goldpitcher.co.kr/pages/viewpage.action?pageId=983208
+- 각 종 트러블 슈팅 관련 링크들..
+
+https://geekflare.com/apache-interview-questions-answers/
+- 실용적인 Apach web server
+
+■
+home 안에 자바 깔것
+로그프레소도
+
+MIN_HEAP_SIZE=4G
+MAX_HEAP_SIZE=4G
+MAX_PERMGEN_SIZE=300M
+MAX_DIRECT_MEM_SIZE=24G
+
+■ 
+ftp 서버 실행 확인
+service vsftpd status
+텔넷도 없어서 수집기도 만들 수 없는 상황
+
+웹서버가 실행 중임을 나타낸다.
+service httpd status
+
+웹 서버 시작
+service httpd start
+
+■
+/home/lgcuser/java/jdk1.8.0_92/bin
+/home/lgcuser/Logpresso/
+
+■분석쪽으로 적용해 볼만한 통계적 분석기법이 있는지 조사해 볼 것
+아웃소싱 활용할 것..
+
+■ 내 pc정보
+IP=10.31.203.83,   MAC=10:4A:7D:B8:B8:89,   PC명=C1512LN0145 
+
+
+==================================================
+<17-08-28>
+◇서버 계정 수집서버와 수집대상서버로 구분하고, 가독성있게 편집해 볼 것
+==================================================
+
+■ snmp서비스는 시스템 상태를 실시간으로 파악하는 NMS(Network Management System)를 위하여
+Unix 시스템에서 기본적으로 제공하는 서비스이며,
+정보를 받기위해 일종의 패스워드인 Community String을 사용한다.
+Community String 은 Default로 public, private으로 설정된 경우가 많으며 변경하는게 보안상 좋다.
+
+1. snmpd.conf 파일에서 Default Community String 값 사용 여부 확인
+
+# cat /etc/snmp/conf/snmpd.conf
+read-community public → (Solaris의 경우에 해당)
+
+※ snmpd.conf 기본 파일 위치
+- Linux : /etc/snmp/snmpd.conf
+- AIX : /etc/snmpd.conf
+- HP-UX : /etc/snmpd.conf
+- Solaris : /etc/snmp/conf/snmpd/conf
+
+출처 : http://armadablog.tistory.com/75
+
+2. snmpd.conf 파일에서 기본값이 아닌 public 이 아닌 추측 불가능한 다른 이름으로 변경
+
+출처 : http://blog.naver.com/yol2118/100101283149
+
+
+■ 리눅스에서 backspace 가 안먹을 경우
+> stty erase ^?
+
+■ 수집대상서버에서 ftp 설치여부 확인
+ps -ef | grep vsftpd
+
+
+■ (와이어샤크) 
+※ 방화벽이 중간에 막고 있으면 무응답
+※ 막고있진 않지만 reset 되는 경우
+이렇게 두가지가 있음(보통 포트가 닫혀 있을때 reset 패킷을 날림)
+localhost:81
+ip. src xxx dst xxx
+ip. src==xxx | ip. dst==127.0.0.1
