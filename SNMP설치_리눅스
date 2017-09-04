@@ -1,0 +1,27 @@
+■ 확인명령
+① service snmpd status
+② netstat -an | grep ":61"
+※ snmp 가 udp 기반이라고..
+   ftp  는 tcp 기반...
+   일단, 이렇게만 알아두자..
+
+■ 설치
+$ yum -y install net-snmp*
+■ 환경설정 파일 변경
+$ vi /etc/snmp/snmpd.conf
+
+① First 추가
+com2sec logpresso 165.244.240.172 public
+com2sec logpresso 165.244.240.173 public
+
+② Second 추가
+group logpressoGroup v1 logpresso
+
+③ Third 추가
+view all included .1 80
+
+④ Finally 추가
+access logpressoGroup "" any noauth exact all none none
+
+■ 저장
+:wq
