@@ -23,3 +23,4 @@ PCA는 어떤 축이 더 중요하지 그 우선 순위를 구하는 것
 공분산으로 알 수 있는 것은 상관 관계이지, 인과 관계가 아니라는 것을 주의하자.
 
 참고 : https://deeplearning4j.org/kr/eigenvector
+http://wolfpack.hnu.ac.kr/iBooks/MDA/MDA_PCA.pdf
