@@ -108,3 +108,42 @@ http://igija.tistory.com/337
 http://math7.tistory.com/127
 https://m.blog.naver.com/PostView.nhn?blogId=lucifer246&logNo=196963719&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F
 https://www.google.co.kr/url?sa=t&rct=j&q=&esrc=s&source=web&cd=10&ved=0ahUKEwiR0IPj7o3WAhXIKpQKHdylBP0QFghZMAk&url=http%3A%2F%2Fhome.sejong.ac.kr%2FDownload%3Fpkid%3D8904%26index%3D1%26fileName%3D%25ED%2586%25B5%25EA%25B3%2584%25ED%258A%25B9%25EA%25B0%2595-SPSS.pdf%26filePath%3D443%26gubun%3Dboard&usg=AFQjCNH-7PENM_squ0rcUu7WKem62gBfew
+
+
+
+
+
+■표본분산과 표본표준편차의 분모를 n-1로 나누는 이유
+① 첫번째 이유 : 불편성(unbiasedness) 혹은 불편추정량 (unbiased estimator)을 찾고자 하기 위해서
+경험적인 법칙인지 아닌지는 확실히 알수 없지만, 표본에 해당하는 수식의 분모를 n으로 바꾸어 계산해 보면, 그 값은 모집단에 해당하는 값보다 작은 값이 나온다고 한다.
+다시 말해, n으로 나눌경우 한쪽으로 쏠려서 편향된(biased) 계산값이 나올 수 있다는 말이다.
+때문에, 불편추정량을 얻기 위한 방법으로 탄생한 방법이 n-1로 나누는 것이다.
+② 두번째 이유 : 자유도(degree of freedom)
+	이름	키(cm)
+      -----------------
+       김새별   163
+       오현민   171
+       이지민    ?
+
+(163 + 171 + x ) / 3 = 173cm
+※ 모집단의 평균(μ)에 대한 정보가 없을 때 → 모집단으로부터 추출한 표본평균(x_bar)을 이용하여 모집단의 평균(μ)을 추정한다.
+
+평균이 다음과 같이 정해졌을 경우
+x값은 무조건 185cm 이어야 한다.
+이때 이지민의 키를 두고 '자유도가 없는 수'라고 칭한다.
+앞선 두개의 자유도를 가진 수에 의해 값이 이미 정해진, 즉 선택권이 없는 수이기 때문이다.
+간단히 말해 '자유로운 수','독립적인 수'가 n-1개이기 때문에 n에서 자유롭지 않은 수 하나를 뺀 n-1로 나누어야 한다는 것이다.
+즉, 위의 예에서 자유도가 있는 수가 2개뿐이니, 3개의 표본의 분산 혹은 표준편차를 구학자 할 때 3이 아닌 2로 나누는 것이다.
+
+■ 표준오차(SE, Standard Error)란?
+표본평균의 표준편차
+보통 SE로 나타냄
+
+■표본오차(sampling error)란?
+모집단을 대표할 수 있는 전형적인 구성 요소를 선택하지 못함으로써 발생하는 오차
+
+
+- t검정 회귀분석 실질예제 추가 필요(두집단간)
+- R분석 및 해석 정리 필요
+- file:///C:/Users/lg/Downloads/NoticeFile.pdf
+→ "회귀분석의 기본가정(21p)"부터 정리할 것
