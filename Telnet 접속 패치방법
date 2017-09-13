@@ -1,0 +1,13 @@
+텔넷 접속 : telnet localhost 7004
+텔넷 접속후 
+접속 id : root
+최초 접속시 pw : araqne
+변경 pw : 1q2w3e4r!!
+
+bundle.list -> snmpmon의 번들 번호 확인
+bundle.replace 73 file:///C:/Program> Files/Logpresso/bundle.jar
+▷Linux 의 경우 (file:////home/mwlee/~~/~.jar) → 이런식◁
+
+bundle.replace 73 
+
+bundle.refresh -> 패치 전후 버전 변경 확인
