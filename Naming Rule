@@ -1,0 +1,15 @@
+■ Naming Rule
+1. 테이블명
+Category1 : [db/was/webserver/syslog/winevt/bizactor...]
+Category2 : [oracle/mssql/tibero...]
+Ex) db_oracle
+2. 수집기명
+Category1 : [db/was/webserver/syslog/winevt/bizactor...]
+Category2 : [oracle/mssql/tibero...]
+Category3 : [access/error/system...][확장자 제외]
+Ex) db_oracle_error
+
+■ 수집기 구현 Rule
+1. _host = hostname
+2. 디렉터리 와쳐 로거의 경우 파일이름태그 = FILENAME
+3. 로테이션 로거의 경우 트랜스포머[키밸류 태그 - FILENAME="수집대상파일명"] 적용
