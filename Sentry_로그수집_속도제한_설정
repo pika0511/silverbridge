@@ -1,0 +1,17 @@
+<Sentry_로그수집_속도제한_설정>
+
+
+■ 디폴트값 : 10000000 건/초 
+
+■ 신규설정값 : 500 건/초 [추후 대역폭에 따른 변경 要]
+
+■ 현재 적용 서버 : lchnmsscoll01 - lchnmsscoll07 [ 7 ea ]
+
+araqne> sentry.setInputRateLimit 50
+set
+araqne> sentry.configs
+Config Parameters
+----------------------------
+Input Rate Limit: 500 logs/sec
+Flush Size: 5000
+RPC Timeout: 10000ms
