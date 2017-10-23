@@ -7,7 +7,10 @@
 
 ■ 현재 적용 서버 : lchnmsscoll01 - lchnmsscoll07 [ 7 ea ]
 
-araqne> sentry.setInputRateLimit 50
+■ [리눅스]텔넷 접속
+ssh -lroot -p7022 localhost
+
+araqne> sentry.setInputRateLimit 500
 set
 araqne> sentry.configs
 Config Parameters
