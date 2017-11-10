@@ -1,0 +1,17 @@
+1) 173 로그프레소 중단
+	→ sh logpresso.sh stop
+2) data 백업 카피(.old)
+	→ cp -r ./data ./data.old
+3) /data001
+	→ mv ./data /data001/
+4) logpresso.sh 파일 수정 및 주석해제
+	→ cat logpresso.sh
+	※ 변경내용
+	DATADIR="/data001/data"
+	JAVA_OPTS="$JAVA_OPTS -Daraqne.data.dir=$DATADIR/"
+5) 저장
+	→ esc → shift+: → wq + Enter
+6) Logpresso/log/araqne.log tail로 띄우기
+	→ tail -f araqne.log
+7) logpresso 접속
+	→ sh logpresso.sh start
