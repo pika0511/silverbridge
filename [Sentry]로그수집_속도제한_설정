@@ -18,3 +18,17 @@ Config Parameters
 Input Rate Limit: 500 logs/sec
 Flush Size: 5000
 RPC Timeout: 10000ms
+
+
+-----------------------------
+발신자: "최명수" <msu.choi.x@gmail.com>
+보낸 날짜: 2017-08-24 16:21
+수신: 최명수(Myoung Su Choi)[msu.choi] <msu.choi@lgchem.com>
+제목: 속도제한 프로파일 정보
+
+1건 건당 평균 301.39 byte/sec 이며
+500건 150695 byte/sec
+1000건 301390 byte/sec
+2000건 602780 byte/sec 입니다!
+
+나의 iPhone에서 보냄
