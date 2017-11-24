@@ -1,0 +1,41 @@
+1. 작업 PC에서 텔넷 접속 및 로그인 
+
+2. 최초 App Template 빌드 
+logpresso.createAppProject 
+
+=>Project path? c:\lgchemviewer
+=>Bundle Symbolic Name? com.logpresso.lgchem
+=>Bundle Version? 1.0.0
+=>App ID? lgchemviewer
+=>App Name? lgchemviewer
+=>App Version? 1.0.0
+=>Program ID (empty line to exit)? lgchemViewer
+=>Program Display Name? lgchemViewer
+=>Program Profiles? all
+=>Program ID (empty line to exit)?
+=>generated
+
+3.spring or eclipse 프로젝트 폴더 import 
+=> Projects from Folder or Archive
+
+logpresso.buildApp c:\lgchemviewer c:\lgchemviewer\lgchemviewer.jar
+=> 해당 경로로 lgchemviewer.jar 로 App Template이 생성됨 
+
+bundle.install file:///c:/logGenerator/logGenerator.jar 
+=> bundle [number 111] 
+
+loaded bundle.list 
+=> 생성한 번들 번호는 [INSTALLED] 상태일 것임, 하기에 활성화 시켜주는 작업 진행 
+
+bundle.start 111 
+=> bundle 111 started 
+
+bundle.list 
+=> 해당 번들 번호로 [ACTIVE] 확인 
+
+
+■ 수정한 bundle refresh 작업 
+
+1. 수정 작업 후 텔넷 접속 logpresso.buildApp c:/sample2 c:/sample2/sample2.jar 
+2. 새로운 번들로 교체 (교체할 번들 번호 기입) bundle.replace 112 file:///C:/sample2/sample2.jar 
+3. 번들 캐시 리프레시 bundle.refresh
